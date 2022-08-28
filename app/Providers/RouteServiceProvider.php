@@ -30,11 +30,12 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->routes(static function () {
             Route::middleware('api')
-                ->domain("api.".config('app.domain'))
+                ->domain("{account}.api." . config('app.domain'))
                 ->group(base_path('routes/api.php'));
 
             Route::middleware('web')
-                ->group(base_path('routes/web.php'));
+                ->domain("{account}." . config('app.domain'))
+                ->group(base_path('routes/domain.php'));
         });
     }
 

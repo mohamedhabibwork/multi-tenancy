@@ -56,7 +56,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'domain' => env('APP_DOMAIN', 'localhost'),
+    'domain' => env('APP_DOMAIN', 'multi-tenancy.staging-5code.com'),
 
     'asset_url' => env('ASSET_URL'),
 
