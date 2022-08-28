@@ -36,6 +36,9 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->domain("{account}." . config('app.domain'))
                 ->group(base_path('routes/domain.php'));
+
+            Route::middleware('web')
+                ->group(base_path('routes/web.php'));
         });
     }
 

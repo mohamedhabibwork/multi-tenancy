@@ -18,6 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/',function ($account){
+Route::get('/', static function ($account){
    return "{$account} api";
 });
